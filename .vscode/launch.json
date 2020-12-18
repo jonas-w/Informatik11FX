@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "PowerShell",
+            "request": "launch",
+            "name": "PowerShell Launch Current File",
+            "script": "put full path here\\launch.ps1",
+            "args": ["${file}"],
+            "cwd": "${file}"
+        }
+    ]
+}
