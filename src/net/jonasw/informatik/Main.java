@@ -16,7 +16,7 @@ public class Main extends JFrame {
         } catch (Exception e) {
             // Wenn nich dann halt nich
         }
-        new Main();
+        new Main();// JFrame wird gestartet
     }
 
     public Main() {

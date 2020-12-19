@@ -5,7 +5,7 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 
 public class Statics {
-    public static Color background = new Color(35, 35, 40);
+    public static Color background = new Color(35, 35, 40);// Damit ich hier für alles die Farbe ändern kann
     public static Color foreground = Color.white;
     public static String lineSplitter = "_//|//_";// Damit der Server weiß was jetzt eine Nachricht ist und was ein
                                                   // "Command" ist

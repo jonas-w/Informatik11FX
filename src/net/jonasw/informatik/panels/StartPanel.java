@@ -29,8 +29,9 @@ public class StartPanel extends net.jonasw.informatik.panels.Panel {
         JLabel jl2 = new JLabel("Gewünschter Nutzername:");
         jl2.setForeground(Statics.foreground);// S.O.
 
-        JTextField serveraddr = new JTextField("localhost:54321");// Textfeld für die Serveradresse
-        JTextField username = new JTextField("Jonas");// Textfeld für den Nutzernamen
+        JTextField serveraddr = new JTextField("localhost:54321");// Textfeld für die Serveradresse/Standard das
+                                                                  // localhost der Server ist
+        JTextField username = new JTextField("");// Textfeld für den Nutzernamen
         JButton connectButton = new JButton("Verbinden!");
         connectButton.addActionListener(new ActionListener() {
             @Override
@@ -55,8 +56,10 @@ public class StartPanel extends net.jonasw.informatik.panels.Panel {
                     return;
                 }
                 try {
-                    Socket client = new Socket(addressparts[0], port);
+                    Socket client = new Socket(addressparts[0], port);// Mit dem Server Verbinden
                     p.switchFrame(new ChatPanel(p, client, username.getText()));
+                    // Zum ChatPanel wechseln mit dem Verbundenn Socket
+
                 } catch (Exception e) {
                     Statics.error(e.toString());// Schick den error an meine Methode weiter
                 }
